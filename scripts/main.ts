@@ -1,4 +1,6 @@
-export {};
+import load from "./_loader";
+import printMe from "./_printMe";
 
-const bodyClassList = document.body.classList;
-console.log(bodyClassList);
+document.addEventListener("DOMContentLoaded", () => {
+  load("category", printMe);
+});
