@@ -16,3 +16,13 @@
     @include holy-grail-footer;
   }
 }
+
+section#navbar {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  .left-side {
+  }
+  .right-side {
+  }
+}

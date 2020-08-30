@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Navbar from "../components/_navbar";
+import TheNavbar from "../components/_navbar";
 import LeftSidebar from "../components/_left-sidebar";
 import RightSidebar from "../components/_right-sidebar";
 import Footer from "../components/_footer";
@@ -22,7 +22,7 @@ export default class Page extends Component<Props, State> {
     return (
       <div className="parent">
         <header>
-          <Navbar />
+          <TheNavbar />
         </header>
         <div className="left-side">
           <LeftSidebar />
