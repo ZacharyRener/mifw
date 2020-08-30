@@ -1,0 +1,76 @@
+/* ============================================================== *
+*       10 Modern CSS layout and sizing techniques
+*  ============================================================== *
+*       Replicated from https://1linelayouts.glitch.me/
+*  ============================================================== */
+
+/* ============================================================== *
+*       Layout: Super Centered
+*  ============================================================== *
+*       Centers anything in it's parent element
+*  ============================================================== */
+@mixin super-centered {
+  display: grid;
+  place-items: center;
+}
+/* ============================================================== *
+  *       Layout: The Deconstructed Pancake
+  *  ============================================================== *
+  *       3 Columns, Responsively
+  *  ============================================================== */
+@mixin pancake-parent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+@mixin pancake {
+  flex: 1 1 150px; /* Stretching */
+  flex: 0 1 150px; /* Not Stretching */
+  margin: 5px;
+}
+/* ============================================================== *
+  *       Layout: Sidebar Says
+  *  ============================================================== *
+  *       Layout with a sidebar 
+  *       Minimum Width: 150px
+  *       Desired Width: 25%
+  *  ============================================================== */
+@mixin sidebar-says {
+  display: grid;
+  grid-template-columns: minmax(150px, 25%) 1fr;
+}
+/* ============================================================== *
+  *       Layout: Pancake Stack
+  *  ============================================================== *
+  *       Layout with a header, main, and footer
+  *  ============================================================== */
+@mixin pancake-stack {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+/* ============================================================== *
+  *       Layout: Classic Holy Grail
+  *  ============================================================== *
+  *       Header, Left Sidebar, Main, Right Sidebar, Footer 
+  *  ============================================================== */
+@mixin holy-grail-parent {
+  display: grid;
+  grid-template: auto 1fr auto / auto 1 fr auto;
+}
+@mixin holy-grail-header {
+  padding: 2rem;
+  grid-column: 1 / 4;
+}
+@mixin holy-grail-left {
+  grid-column: 1 / 2;
+}
+@mixin holy-grail-main {
+  grid-column: 2 / 3;
+}
+@mixin holy-grail-right {
+  grid-column: 3 / 4;
+}
+@mixin holy-grail-footer {
+  grid-column: 1 / 4;
+}

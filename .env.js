@@ -1,2 +1,2 @@
 const SITE_URL = "testing.local";
-export default SITE_URL;
+exports.SITE_URL = SITE_URL;

@@ -1,6 +1,8 @@
+import "../styles/main.scss";
 import load from "./_loader";
-import printMe from "./_printMe";
+import samplePage from "./_sample-page";
 
 document.addEventListener("DOMContentLoaded", () => {
-  load("category", printMe);
+  let bodyClass, callback;
+  load((bodyClass = "home"), (callback = samplePage));
 });

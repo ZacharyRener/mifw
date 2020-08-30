@@ -1,0 +1,18 @@
+.parent {
+  @include holy-grail-parent;
+  header {
+    @include holy-grail-header;
+  }
+  .left-side {
+    @include holy-grail-left;
+  }
+  main {
+    @include holy-grail-main;
+  }
+  .right-side {
+    @include holy-grail-right;
+  }
+  footer {
+    @include holy-grail-footer;
+  }
+}

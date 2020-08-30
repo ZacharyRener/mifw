@@ -1,4 +1,5 @@
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
+const config = require("./.env.js");
 
 module.exports = {
   mode: "development",
@@ -58,7 +59,7 @@ module.exports = {
         // proxy the Webpack Dev Server endpoint
         // (which should be serving on http://localhost:3100/)
         // through BrowserSync
-        proxy: "testing.local",
+        proxy: config.SITE_URL,
       },
       // plugin options
       {
