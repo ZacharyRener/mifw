@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import TheNavbar from "../components/_navbar";
-import LeftSidebar from "../components/_left-sidebar";
-import RightSidebar from "../components/_right-sidebar";
+import Sidebar from "../components/_left-sidebar";
 import Footer from "../components/_footer";
 
 interface Props {
@@ -20,20 +19,23 @@ export default class Page extends Component<Props, State> {
 */
   render() {
     return (
-      <div className="parent">
+      <div id="site">
         <header>
           <TheNavbar />
         </header>
-        <div className="left-side">
-          <LeftSidebar />
+        <div id="page-wrapper">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-4 sidebar">
+                <Sidebar />
+              </div>
+              <main
+                className="col-md-8 main"
+                dangerouslySetInnerHTML={{ __html: this.props.content }}
+              />
+            </div>
+          </div>
         </div>
-        <main dangerouslySetInnerHTML={{ __html: this.props.content }} />
-        <div className="right-side">
-          <RightSidebar />
-        </div>
-        <footer>
-          <Footer />
-        </footer>
       </div>
     );
   }
