@@ -24,6 +24,7 @@ export default class Page extends Component<Props, State> {
           <TheNavbar />
         </header>
         <div id="page-wrapper">
+          <img src="/wp-content/uploads/2020/09/gettyimages-1135356657-2048x2048-1.png" />
           <div className="container">
             <div className="row">
               <div className="col-md-4 sidebar">
