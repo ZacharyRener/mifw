@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import Button from "react-bootstrap/Button";
 
-interface Props {}
+interface Props {
+  site_url: string;
+}
 
 interface State {
   buildPath: string;
@@ -19,7 +21,7 @@ export default class Sidebar extends Component<Props, State> {
     return (
       <div className="sidebar">
         <div className="offer">
-          <img src={`${this.state.buildPath}/images/offer.webp`} />
+          <img src={`${this.props.site_url}/mifw/build/images/offer.webp`} />
           <div className="content">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
