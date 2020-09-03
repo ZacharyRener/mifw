@@ -7,12 +7,16 @@ interface Props {
   content: string;
 }
 
-interface State {}
+interface State {
+  buildPath: string;
+}
 
 export default class Page extends Component<Props, State> {
   constructor(props: any) {
     super(props);
-    this.state = {};
+    this.state = {
+      buildPath: "/wp-content/themes/mifw/mifw/build",
+    };
   }
   /*
   TODO: Create navbar component, and others. Then make it into a theme w/ minified js and test speeds
@@ -24,7 +28,7 @@ export default class Page extends Component<Props, State> {
           <TheNavbar />
         </header>
         <div id="page-wrapper">
-          <img src="/wp-content/uploads/2020/09/gettyimages-1135356657-2048x2048-1.png" />
+          <img src={`${this.state.buildPath}/images/hero.webp`} />
           <div className="container">
             <div className="row">
               <div className="col-md-4 sidebar">
