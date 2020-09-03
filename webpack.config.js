@@ -1,12 +1,13 @@
 const BrowserSyncPlugin = require("browser-sync-webpack-plugin");
 const config = require("./.env.js");
+const TerserPlugin = require("terser-webpack-plugin");
 
 module.exports = {
   mode: "development",
   entry: "./scripts/main.ts",
   output: {
     path: __dirname + "/build",
-    filename: "main.js",
+    filename: "main.min.js",
   },
   devtool: "inline-source-map",
   module: {
@@ -69,4 +70,8 @@ module.exports = {
       }
     ),
   ],
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
+  },
 };
