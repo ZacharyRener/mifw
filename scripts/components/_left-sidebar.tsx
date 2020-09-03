@@ -1,21 +1,27 @@
 import React, { Component } from "react";
 import Button from "react-bootstrap/Button";
 
-interface Props {}
+interface Props {
+  site_url: string;
+}
 
-interface State {}
+interface State {
+  buildPath: string;
+}
 
 export default class Sidebar extends Component<Props, State> {
   constructor(props: any) {
     super(props);
-    this.state = {};
+    this.state = {
+      buildPath: "/wp-content/themes/mifw/mifw/build",
+    };
   }
 
   render() {
     return (
       <div className="sidebar">
         <div className="offer">
-          <img src="/wp-content/uploads/2020/09/Screen-Shot-2020-08-21-at-5.23.31-PM.png" />
+          <img src={`${this.props.site_url}/mifw/build/images/offer.webp`} />
           <div className="content">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

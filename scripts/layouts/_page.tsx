@@ -5,6 +5,7 @@ import Footer from "../components/_footer";
 
 interface Props {
   content: string;
+  site_url: string;
 }
 
 interface State {}
@@ -24,11 +25,11 @@ export default class Page extends Component<Props, State> {
           <TheNavbar />
         </header>
         <div id="page-wrapper">
-          <img src="/wp-content/uploads/2020/09/gettyimages-1135356657-2048x2048-1.png" />
+          <img src={`${this.props.site_url}/mifw/build/images/hero.webp`} />
           <div className="container">
             <div className="row">
               <div className="col-md-4 sidebar">
-                <Sidebar />
+                <Sidebar site_url={this.props.site_url} />
               </div>
               <main
                 className="col-md-8 main"
