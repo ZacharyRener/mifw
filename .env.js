@@ -1,2 +1,1 @@
-const SITE_URL = "testing.local";
-exports.SITE_URL = SITE_URL;
+exports.SITE_URL = "mifw.local"
