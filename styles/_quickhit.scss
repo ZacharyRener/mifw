@@ -1,0 +1,20 @@
+#quickhit {
+  &,
+  * {
+    transition: $transition;
+  }
+  background: #eee;
+  .container {
+    padding: 65px 10%;
+    font-size: larger;
+    p {
+      margin-bottom: 0;
+    }
+    @include small {
+      padding: 65px 0;
+    }
+    @include phone {
+      padding: 65px 15px;
+    }
+  }
+}

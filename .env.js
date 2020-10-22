@@ -1,1 +1,1 @@
-exports.SITE_URL = "mifw.local"
+exports.SITE_URL = "http://schnack.local"

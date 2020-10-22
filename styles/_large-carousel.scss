@@ -1,0 +1,142 @@
+/* ============================================================== *
+ * Font Awesome Icons                                             *
+ * ============================================================== */
+$caret-right-icon: "\f0d9";
+$caret-left-icon: "\f0da";
+/* ============================================================== *
+ * Slider Settings                                                *
+ * ============================================================== */
+$slider__left-arrow: $caret-left-icon;
+$slider__right-arrow: $caret-right-icon;
+$slider__left-arrow__color: white;
+$slider__right-arrow__color: white;
+$slider__height: calc(100vh - 109px);
+$slider__content__alignment: flex-start;
+$slider__image__object-position-full: center;
+$slider__image__object-position-small: left;
+$slider__image__object-position-phone: left;
+/* ============================================================== *
+ * Slider Heading                                                 *
+ * ============================================================== */
+$slider__heading__font-size: 4rem;
+$slider__heading__color: white;
+$slider__heading__font: inherit;
+$slider__heading__font-weight: inherit;
+$slider__heading__margin-bottom: 0;
+/* ============================================================== *
+ * Slider Excerpt                                                 *
+ * ============================================================== */
+$slider__excerpt__font: inherit;
+$slider__excerpt__font-size: inherit;
+$slider__excerpt__font-weight: inherit;
+$slider__excerpt__color: white;
+$slider__excerpt__margin-bottom: 20px;
+/* ============================================================== */
+
+#carousel {
+  background: darkgray;
+  overflow: hidden;
+  * {
+    transition: $transition;
+  }
+  position: relative;
+  .next {
+    cursor: pointer;
+    @extend %fa-icon;
+    @extend .fas;
+    &:before {
+      content: $slider__left-arrow;
+      color: $slider__left-arrow__color;
+    }
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    @include phone {
+      left: unset;
+      top: unset;
+      right: 40%;
+      transform: translateX(-40%);
+      bottom: 50px;
+    }
+  }
+
+  .prev {
+    cursor: pointer;
+    @extend %fa-icon;
+    @extend .fas;
+    &:before {
+      content: $slider__right-arrow;
+      color: $slider__right-arrow__color;
+    }
+    position: absolute;
+    left: 25px;
+    top: 50%;
+    transform: translateY(-50%);
+    @include phone {
+      top: unset;
+      right: unset;
+      left: 40%;
+      transform: translateX(-40%);
+      bottom: 50px;
+    }
+  }
+  height: $slider__height;
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: $slider__image__object-position-full;
+    @include small {
+      object-position: $slider__image__object-position-small;
+    }
+    @include phone {
+      object-position: $slider__image__object-position-phone;
+    }
+  }
+  .container {
+    height: 100%;
+    overflow: hidden;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  #content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: $slider__content__alignment;
+    .heading,
+    .excerpt,
+    .btn {
+      z-index: 1;
+    }
+    .heading {
+      font-size: $slider__heading__font-size;
+      margin-bottom: $slider__heading__margin-bottom;
+      color: $slider__heading__color;
+      font-family: $slider__heading__font;
+      font-weight: $slider__heading__font-weight;
+    }
+    .excerpt {
+      margin-bottom: $slider__excerpt__margin-bottom;
+      color: $slider__excerpt__color;
+      font-size: $slider__excerpt__font-size;
+      font-family: $slider__excerpt__font;
+      font-weight: $slider__heading__font-weight;
+    }
+  }
+}

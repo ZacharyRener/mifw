@@ -1,0 +1,45 @@
+#seo-section {
+  &,
+  * {
+    transition: $transition;
+  }
+  padding: 65px 0;
+  background: #eee;
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .left,
+  .right {
+    width: 50%;
+    @include small {
+      width: 100%;
+    }
+    @include phone {
+      width: 100%;
+    }
+  }
+  .left {
+  }
+  .right {
+    text-align: center;
+    @include small {
+      order: -1;
+      margin-bottom: 35px;
+    }
+    @include phone {
+      order: -1;
+      margin-bottom: 35px;
+    }
+    img {
+      max-width: 100%;
+      @include small {
+        width: 100%;
+      }
+      @include phone {
+        width: 100%;
+      }
+    }
+  }
+}
