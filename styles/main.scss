@@ -1,0 +1,25 @@
+@mixin large {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media (max-width: 1199px) and (min-width: 992px) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media (max-width: 991px) and (min-width: 769px) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+$transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
