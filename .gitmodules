@@ -1,0 +1,7 @@
+[submodule "library"]
+	path = library
+	url = https://github.com/ZacharyRener/library
+
+[submodule "Trip-Tiger-Logic"]
+	path = Trip-Tiger-Logic
+	url = https://github.com/ZacharyRener/Trip-Tiger-Logic
