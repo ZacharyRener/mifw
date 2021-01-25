@@ -22,4 +22,12 @@
   }
 }
 
+@mixin abovePhone {
+  @media(min-width:769px){
+    @content;
+  }
+}
+
 $transition: 0.8s cubic-bezier(0.2, 1, 0.3, 1);
+
+@import "../library/HPF/main.scss";
